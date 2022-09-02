@@ -1,0 +1,27 @@
+name: Go-CI-CD-AWS-ELB
+env:
+  EB_PACKAGE_BUCKET_NAME: "adv-it-lesson-ga"
+  EB_PACKAGE_APPLICATION_NAME: "Mygoapp"
+  EB_PACKAGE_ENVIRONMENT_NAME: "Mygoapp-env"
+  DEPLOY_PACKAGE_NAME: "Mygoapp-${{ github.sha}}.zip"
+  AWS_REGION_NAME: "us-east-1"
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  ci_pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: git clone
+        uses: actions/checkout@v1
+      
+      - name: create archive
+        run: zip -r ${{ env.DEPLOY_PACKAGE_NAME }} ./ -x *.git*
+        
+        
+    
+  
