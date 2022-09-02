@@ -5,7 +5,7 @@ env:
   EB_PACKAGE_ENVIRONMENT_NAME: "Mygoapp-env"
   DEPLOY_PACKAGE_NAME: "Mygoapp-${{ github.sha}}.zip"
   AWS_REGION_NAME: "us-east-1"
-  AWS_APPLICATION_VERSION: "Ver-${{ github.sha}}.zip"
+  AWS_APPLICATION_VERSION: "Ver-${{ github.sha}}"
 on:
   push:
     branches: [ "main" ]
