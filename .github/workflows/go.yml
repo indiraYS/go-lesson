@@ -55,7 +55,7 @@ jobs:
       - name: Deploy new Elastic Beanstalk Application version
         run: |
           aws elasticbeanstalk update-environment --environment-name ${{ env.EB_PACKAGE_ENVIRONMENT_NAME }} \
-          --versioon-label "${{ env.AWS_APPLICATION_VERSION }}"
+          --version-label "${{ env.AWS_APPLICATION_VERSION }}"
           
       - name: print happy message
         run: echo "CD Pipeline successfully finished"
