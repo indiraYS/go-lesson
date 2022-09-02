@@ -53,7 +53,7 @@ func handleRequest() {
   http.Handle("/static/", http.StripPrefix("/static/",http.FileServer(http.Dir("./static/"))))
   http.HandleFunc("/", home_page)
   http.HandleFunc("/contacts/", contacts_page)
-  http.ListenAndServe(":8085", nil)
+  http.ListenAndServe(":80", nil)
 }
 
 // func dbConnect() {
