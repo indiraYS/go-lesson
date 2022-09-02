@@ -1,7 +1,7 @@
 name: Go-CI-CD-AWS-ELB
 env:
   EB_PACKAGE_BUCKET_NAME: "adv-it-lesson-ga"
-  EB_PACKAGE_APPLICATION_NAME: "Mygoapp"
+  EB_PACKAGE_APPLICATION_NAME: "my-go-app"
   EB_PACKAGE_ENVIRONMENT_NAME: "Mygoapp-env"
   DEPLOY_PACKAGE_NAME: "Mygoapp-${{ github.sha}}.zip"
   AWS_REGION_NAME: "us-east-1"
