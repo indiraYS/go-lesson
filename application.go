@@ -1,10 +1,6 @@
 package main
 
-import ("fmt"; "net/http"; "log"; "html/template";
-  //"context"
-//"github.com/jackc/pgx/v4"
-
-)
+import ("fmt"; "net/http"; "log"; "html/template")
 
 type User struct {
     Name  string
@@ -53,7 +49,7 @@ func handleRequest() {
   http.Handle("/static/", http.StripPrefix("/static/",http.FileServer(http.Dir("./static/"))))
   http.HandleFunc("/", home_page)
   http.HandleFunc("/contacts/", contacts_page)
-  http.ListenAndServe(":80", nil)
+  http.ListenAndServe(":5000", nil)
 }
 
 // func dbConnect() {
